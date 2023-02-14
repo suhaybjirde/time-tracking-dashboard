@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root {
+    --clr-primary-100: hsl(15, 100%, 70%);
+    --clr-primary-200: hsl(195, 74%, 62%);
+    --clr-primary-300: hsl(348, 100%, 68%);
+    --clr-primary-400: hsl(145, 58%, 55%);
+    --clr-primary-500: hsl(264, 64%, 52%);
+    --clr-primary-600: hsl(43, 84%, 65%);
+    --clr-primary-700: hsl(246, 80%, 60%);
+
+
+    --clr-neutral-100: hsl(226, 43%, 10%);
+    --clr-neutral-200: hsl(235, 46%, 20%);
+    --clr-neutral-300: hsl(235, 45%, 61%);
+    --clr-neutral-350: hsl(235, 45%, 55%);
+    --clr-neutral-400: hsl(236, 100%, 87%);
+    --clr-neutral-500: hsl(0, 0%, 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Rubik', sans-serif;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+main {
+    min-height: 100vh;
+    background-color: var(--clr-neutral-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 850px;
+
+}
+.profile {
+    grid-row: span 2;
+}
+.activity-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: stretch;
+    background-image: url(/assets/images/icon-play.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work {
+    background-color: var(--clr-primary-100);
+}
+.play {
+    background-color: var(--clr-primary-200);
+}
+.study {
+    background-color: var(--clr-primary-300);
+}
+.exercise {
+    background-color: var(--clr-primary-400);
+}
+.social {
+    background-color: var(--clr-primary-500);
+}
+.self-care {
+    background-color: var(--clr-primary-600);
+}
+.activity {
+    background-color: var(--clr-neutral-200);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 80%;
+    z-index: 1;
+    padding: 15px;
+    color: var(--clr-neutral-500);
+    transition: background-color .2s;
+    cursor: pointer;
+}
+.activity:hover {
+    background-color: var(--clr-neutral-350);
+}
+.activity-img {
+    position: absolute;
+    width: 50px;
+    right: 10px;
+    top: -3px;
+    opacity: .7;
+}
+.activity-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.activity-name {
+    font-weight: 500;
+}
+.prev-and-time {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.activity-time {
+    font-weight: 300;
+    font-size: 2.8rem;
+}
+.previous {
+    font-size: 0.8rem;
+    color: var(--clr-neutral-400);
+}
+.profile {
+    background-color: var(--clr-neutral-200);
+    border-radius: 10px;
+}
+.wrapper {
+    background-color: var(--clr-primary-700);
+    border-radius: 10px;
+    padding: 40px 20px;
+}
+.profile-pic {
+    width: 60px;
+    height: 60px;
+    border: 3px solid var(--clr-neutral-500);
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.report {
+    color: var(--clr-neutral-400);
+}
+.name {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 2.3rem;
+    color: var(--clr-neutral-500);
+}
+.recurrence { 
+    padding: 20px;
+}
+.recurrence a {
+    color: var(--clr-neutral-400);
+    display: block;
+    margin-bottom: 10px;
+}
+.recurrence a:hover, .recurrence a.current {
+    color: var(--clr-neutral-500);
+}
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 30px 0;
+    }
+    .profile {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .wrapper {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .name {
+        font-size: 1.4rem;
+    }
+    .profile-pic {
+        margin-bottom: 0;
+    }
+    .recurrence {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--clr-neutral-200);
+    }
+    .activity-wrapper {
+        height: 150px;
+    }
+    .prev-and-time {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 0;
+        padding: 10px 0;
+    }
+}

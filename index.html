@@ -1,80 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Time tracking dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <div class="container">
+      <div class="profile">
+        <div class="wrapper">
+          <div class="profile-pic">
+            <img src="assets/images/image-jeremy.png" alt="">
+          </div>
+          <div class="profile-info">
+            <small class="report">Report for</small>
+            <h1 class="name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="recurrence">
+          <a href="" class="daily current date">Daily</a>
+          <a href="" class="weekly date">Weekly</a>
+          <a href="" class="monthly date">Monthly</a>
+        </div>
+      </div>
+      <div class="work activity-wrapper">
+        <img src="assets/images/image-0.svg" alt="" class="activity-img">
+        <div class="activity">
+          <div class="activity-head">
+            <p class="activity-name">Work</p>
+            <a href="" class="dot"><img src="assets/images/icon-ellipsis.svg" alt=""></a>
+          </div>
+          <div class="prev-and-time">
+            <h2 class="activity-time">5hrs</h2>
+            <p class="previous">Yesterday-7hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="play activity-wrapper">
+        <img src="assets/images/image-1.svg" alt="" class="activity-img">
+        <div class="activity">
+          <div class="activity-head">
+            <p class="activity-name">Play</p>
+            <a href="" class="dot"><img src="assets/images/icon-ellipsis.svg" alt=""></a>
+          </div>
+          <div class="prev-and-time">
+            <h2 class="activity-time">1hrs</h2>
+            <p class="previous">Yesterday-2hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="study activity-wrapper">
+        <img src="assets/images/image-2.svg" alt="" class="activity-img">
+        <div class="activity">
+          <div class="activity-head">
+            <p class="activity-name">Study</p>
+            <a href="" class="dot"><img src="assets/images/icon-ellipsis.svg" alt=""></a>
+          </div>
+          <div class="prev-and-time">
+            <h2 class="activity-time">0hrs</h2>
+            <p class="previous">Yesterday-1hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="exercise activity-wrapper">
+        <img src="assets/images/image-3.svg" alt="" class="activity-img">
+        <div class="activity">
+          <div class="activity-head">
+            <p class="activity-name">Exercise</p>
+            <a href="" class="dot"><img src="assets/images/icon-ellipsis.svg" alt=""></a>
+          </div>
+          <div class="prev-and-time">
+            <h2 class="activity-time">1hrs</h2>
+            <p class="previous">Yesterday-1hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="social activity-wrapper">
+        <img src="assets/images/image-4.svg" alt="" class="activity-img">
+        <div class="activity">
+          <div class="activity-head">
+            <p class="activity-name">Social</p>
+            <a href="" class="dot"><img src="assets/images/icon-ellipsis.svg" alt=""></a>
+          </div>
+          <div class="prev-and-time">
+            <h2 class="activity-time">1hrs</h2>
+            <p class="previous">Yesterday-3hrs</p>
+          </div>
+        </div>
+      </div>
+      <div class="self-care activity-wrapper">
+        <img src="assets/images/image-5.svg" alt="" class="activity-img">
+        <div class="activity">
+          <div class="activity-head">
+            <p class="activity-name">Self Care</p>
+            <a href="" class="dot"><img src="assets/images/icon-ellipsis.svg" alt=""></a>
+          </div>
+          <div class="prev-and-time">
+            <h2 class="activity-time">0hrs</h2>
+            <p class="previous">Yesterday-1hrs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
