@@ -10,21 +10,21 @@ async function getData() {
 
 
     daily.addEventListener('click', (e)=> {
-        removeCurrentClass(daily)
+        addCurrentClass(daily)
         e.preventDefault()
         data.forEach(element => {
             changeInnerHtml(element, element.timeframes.daily.current, element.timeframes.daily.previous, 'Yesterday')
         });
     })
     weekly.addEventListener('click', (e)=> {
-        removeCurrentClass(weekly)
+        addCurrentClass(weekly)
         e.preventDefault()
         data.forEach(element => {
             changeInnerHtml(element, element.timeframes.weekly.current, element.timeframes.weekly.previous, 'Last Week')
         });
     })
     monthly.addEventListener('click', (e)=> {
-        removeCurrentClass(monthly)
+        addCurrentClass(monthly)
         e.preventDefault()
         data.forEach(element => {
             changeInnerHtml(element, element.timeframes.monthly.current, element.timeframes.monthly.previous, 'Last Month')
@@ -46,7 +46,7 @@ function changeInnerHtml(element, currentDate, previousDate, previousDateName) {
         }
     })
 }
-function removeCurrentClass(element) {
+function addCurrentClass(element) {
     date.forEach(each => {
         each.classList.remove('current')
     })
