@@ -1,36 +1,38 @@
-const daily = document.querySelector('.daily');
-const weekly = document.querySelector('.weekly');
-const monthly = document.querySelector('.monthly');
-const activity = document.querySelectorAll('.activity-wrapper')
-const date = document.querySelectorAll('.date')
+const activity = document.querySelectorAll('.activity-wrapper') // work, play ...
+const date = document.querySelectorAll('.date') // dail, weekly, monthly
 getData()
 async function getData() {
     const responce = await fetch('./assets/data.json');
     const data = await responce.json();
 
 
-    daily.addEventListener('click', (e)=> {
-        addCurrentClass(daily)
-        e.preventDefault()
-        data.forEach(element => {
-            changeInnerHtml(element, element.timeframes.daily.current, element.timeframes.daily.previous, 'Yesterday')
-        });
+    date.forEach(eachDate => {
+        eachDate.addEventListener('click', (e)=> {
+            e.preventDefault()
+            let target = e.target
+            if (target.classList.contains('daily')) {
+                addCurrentClass(target)
+                e.preventDefault()
+                data.forEach(element => {
+                    changeInnerHtml(element, element.timeframes.daily.current, element.timeframes.daily.previous, 'Yesterday')
+                });
+            } 
+            if (target.classList.contains('weekly')) {
+                addCurrentClass(target)
+                e.preventDefault()
+                data.forEach(element => {
+                    changeInnerHtml(element, element.timeframes.weekly.current, element.timeframes.weekly.previous, 'Last Week')
+                });
+            }
+            if (target.classList.contains('monthly')) {
+                addCurrentClass(target)
+                e.preventDefault()
+                data.forEach(element => {
+                    changeInnerHtml(element, element.timeframes.monthly.current, element.timeframes.monthly.previous, 'Last Month')
+                });
+            }
+        })
     })
-    weekly.addEventListener('click', (e)=> {
-        addCurrentClass(weekly)
-        e.preventDefault()
-        data.forEach(element => {
-            changeInnerHtml(element, element.timeframes.weekly.current, element.timeframes.weekly.previous, 'Last Week')
-        });
-    })
-    monthly.addEventListener('click', (e)=> {
-        addCurrentClass(monthly)
-        e.preventDefault()
-        data.forEach(element => {
-            changeInnerHtml(element, element.timeframes.monthly.current, element.timeframes.monthly.previous, 'Last Month')
-        });
-    })
-
 }
 
 
